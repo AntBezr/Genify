@@ -1,9 +1,10 @@
 import React from 'react';
+import Page from './CssModules/Page.module.css'
 
 const SongPage = () => {
   return (
-    <div>
-
+    <div className={Page.main}>
+      SongPage
     </div>
   );
 };
