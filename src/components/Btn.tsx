@@ -1,10 +1,13 @@
 import React from 'react';
+import btn from './css/Button.module.css'
 
-const Btn = () => {
+type ProfileProps = {
+  btnText: string
+}
+
+const Btn = ({ btnText }: ProfileProps) => {
   return (
-    <div>
-
-    </div>
+    <button className={btn.mainBtn}>{btnText}</button>
   );
 };
 

@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Landing from "./pages/Landing"
-import './App.css';
 import Template from './pages/Template';
 import SongPage from './pages/SongPage';
 import Header from "./components/Header";

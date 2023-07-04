@@ -1,0 +1,21 @@
+.mainBtn {
+  background: linear-gradient(-45deg, rgb(237, 172, 132), pink, rgb(244, 158, 234), rgb(190, 245, 238));
+  background-size: 400%;
+  animation: gradient 8s ease infinite;
+  animation-direction: alternate;
+  border: 1px;
+  border-radius: 20px;
+  font-size: 42px;
+  text-align: center;
+  padding: 10px 40px;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 100%;
+  }
+}

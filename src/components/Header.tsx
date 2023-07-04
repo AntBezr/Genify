@@ -1,21 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import headerCss from './css/Header.module.css'
 
 const Header = () => {
   return (
     <div className={headerCss.header}>
-      <div className="logo">
-        <Link to={"/"}>Genify</Link>
-      </div>
-      <div className="menuBox">
-        <ul>
-          <li><Link to={"/"}>Home</Link></li>
-          <li><Link to={"/songlist"}>Songs</Link></li>
-          <li><Link to={"/"}>About</Link></li>
+      <div className={headerCss.menu}>
+        <div className={headerCss.menuBoxUl}>
+          <NavLink to={"/"} className={headerCss.logo}>Genify</NavLink>
+        </div>
+
+        <ul className={headerCss.menuBoxUl}>
+          <li><NavLink to={"/"} className={headerCss.menuItem}  >Home</NavLink></li>
+          <li><NavLink to={"/songlist"} className={headerCss.menuItem}>Songs</NavLink></li>
+          <li><NavLink to={"/"} className={headerCss.menuItem}>About</NavLink></li>
         </ul>
       </div>
-    </div>
+    </div >
   );
 };
 

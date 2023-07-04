@@ -1,0 +1,46 @@
+.heroBanner {
+  width: 100%;
+  background: url(../../images/heroe.jpg)no-repeat center center/cover;
+  height: calc(100vh - 180px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 15px;
+  margin: 50px 0;
+}
+
+.insipiringText {
+  font-size: 30px;
+  width: 450px;
+}
+
+
+.ganres {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+
+.ganresBox {
+  width: 260px;
+  height: 260px;
+  margin: 20px;
+  border-radius: 15px;
+  background: linear-gradient(0deg, rgb(244, 158, 234), rgb(190, 245, 238));
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  transition: all ease 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ganresBox:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.ganresBox h2 {
+  text-decoration: none;
+}
