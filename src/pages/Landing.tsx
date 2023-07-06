@@ -3,7 +3,7 @@ import page from './CssModules/Page.module.css'
 import landing from './CssModules/landing.module.css'
 import Button from '../components/Btn'
 import { Link } from 'react-router-dom';
-import GetGenres from '../components/GetGenres';
+import { GetGenres } from '../components/GetGenres';
 
 
 
@@ -20,7 +20,7 @@ const Landing = () => {
       </div>
 
       <div className={landing.ganres}>
-        <GetGenres />
+        <h2>{GetGenres()}</h2>
         <Link to={'/'}><div className={landing.ganresBox}><h2>Rock</h2></div></Link>
         <Link to={'/'}><div className={landing.ganresBox}><h2>Pop</h2></div></Link>
         <Link to={'/'}><div className={landing.ganresBox}><h2>Rep</h2></div></Link>

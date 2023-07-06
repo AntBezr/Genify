@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { JSXElementConstructor, useState } from 'react';
 import axios from 'axios';
 
 
 interface Response {
-  genres: string[],
+  mGenres: string[],
 }
 interface tokenResponse {
   access_token: string,
@@ -12,8 +12,9 @@ interface tokenResponse {
 }
 
 
-const GetGenres = () => {
+export function GetGenres() {
   const [token, setToken] = useState<string>('')
+  const [genres, setData] = useState<Response["mGenres"]>([])
 
   const getAccessToken = () => {
     const options = {
@@ -28,7 +29,7 @@ const GetGenres = () => {
         setToken(data.access_token)
       })
       .then(
-        function getQuotes() {
+        function getQuotes(): Response["mGenres"] {
           const opt = {
             method: 'GET',
             url: 'https://api.spotify.com/v1/recommendations/available-genre-seeds',
@@ -36,19 +37,19 @@ const GetGenres = () => {
           };
           axios
             .request(opt)
-            .then(function ({ data }: { data: Response }) {
-              console.log(data);
+            .then(function ({ data }: { data: Response["mGenres"] }) {
+              return setData(data);
             })
             .catch(function (error: any) {
               console.error(error);
-            });
+            })
+          return (genres)
+
         })
       .catch(function (error: any) {
         console.error(error);
       });
   }
-
-
   getAccessToken()
   return (
     <div >
